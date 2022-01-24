@@ -1,14 +1,17 @@
 ﻿@using BlazorBeast.Shared.Versioning
 <div class="container-fluid">
   <footer class="row row-cols-5 py-5 my-5 border-top">
+    
     <div class="col">
-      <p>@AppVersion.Version</p>
-      <p><a href="/">Blazor Beast</a> <span class="text-muted">© 2021</span></p>
-      <p>Brought to you by <a href="https://powered4.tv">Powered4.tv</a></p>
+      <h5>About</h5>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="/">Blazor Beast</a> <span class="text-muted"> © 2021</span></li>
+        <li class="nav-item mb-2">Version @AppVersion!.Version</li>
+        <li class="nav-item mb-2"><a href="/swagger" class="nav-link p-0 text-muted">Api Reference</a></li>
+      </ul>
     </div>
 
     <div class="col">
-
     </div>
 
     <div class="col">
@@ -42,7 +45,7 @@
 @code {
 
 [CascadingParameter]
-public AppVersion AppVersion { get; set; }
+public AppVersion? AppVersion { get; set; }
 
 
 }
